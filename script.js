@@ -32,6 +32,18 @@ const kanjis = [
     { kanji: "鳥", meaning: "Bird" },
     { kanji: "虫", meaning: "Insect" },
     { kanji: "猫", meaning: "Cat" },
+    { kanji: "電話", meaning: "Telephone" },
+    { kanji: "本", meaning: "Book" },	
+    { kanji: "学校", meaning: "School" },
+    { kanji: "青", meaning: "Blue" },
+    { kanji: "赤", meaning: "Red" },
+    { kanji: "白", meaning: "White" },
+    { kanji: "人", meaning: "Person" },
+    { kanji: "田", meaning: "Field" },
+    { kanji: "川", meaning: "River" },
+    { kanji: "海", meaning: "Sea" },
+    { kanji: "天", meaning: "Sky" },
+    { kanji: "地", meaning: "Earth" },
 ];
 
 let currentKanjiIndex = 0;
