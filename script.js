@@ -1,37 +1,37 @@
 const kanjis = [
-    { kanji: "火", meaning: "Fogo" },
-    { kanji: "山", meaning: "Montanha" },
-    { kanji: "日", meaning: "Dia" },
-    { kanji: "月", meaning: "Mês" },
-    { kanji: "水", meaning: "Água" },
-    { kanji: "風", meaning: "Vento" },
-    { kanji: "空", meaning: "Vazio" },
-    { kanji: "大", meaning: "Grande" },
-    { kanji: "小", meaning: "Pequeno" },
-    { kanji: "中", meaning: "Meio" },
-    { kanji: "上", meaning: "Acima" },
-    { kanji: "下", meaning: "Abaixo" },
-    { kanji: "左", meaning: "Esquerda" },
-    { kanji: "右", meaning: "Direita" },
-    { kanji: "男", meaning: "Homem" },
-    { kanji: "女", meaning: "Mulher" },
-    { kanji: "木", meaning: "Árvore" },
-    { kanji: "金", meaning: "Ouro" },
-    { kanji: "魚", meaning: "Peixe" },
-    { kanji: "車", meaning: "Carro" },
-    { kanji: "雨", meaning: "Chuva" },
-    { kanji: "電", meaning: "Eletricidade" },
-    { kanji: "手", meaning: "Mão" },
-    { kanji: "目", meaning: "Olho" },
-    { kanji: "口", meaning: "Boca" },
-    { kanji: "耳", meaning: "Orelha" },
-    { kanji: "花", meaning: "Flor" },
-    { kanji: "犬", meaning: "Cachorro" },
-    { kanji: "水", meaning: "Água" },
-    { kanji: "土", meaning: "Terra" },
-    { kanji: "鳥", meaning: "Pássaro" },
-    { kanji: "虫", meaning: "Inseto" },
-    { kanji: "猫", meaning: "Gato" },
+    { kanji: "火", meaning: "Fire" },
+    { kanji: "山", meaning: "Mountain" },
+    { kanji: "日", meaning: "day" },
+    { kanji: "月", meaning: "Month" },
+    { kanji: "水", meaning: "Water" },
+    { kanji: "風", meaning: "Wind" },
+    { kanji: "空", meaning: "Void" },
+    { kanji: "大", meaning: "Big" },
+    { kanji: "小", meaning: "Small" },
+    { kanji: "中", meaning: "Middle" },
+    { kanji: "上", meaning: "Above" },
+    { kanji: "下", meaning: "Below" },
+    { kanji: "左", meaning: "Left" },
+    { kanji: "右", meaning: "Right" },
+    { kanji: "男", meaning: "Man" },
+    { kanji: "女", meaning: "Women" },
+    { kanji: "木", meaning: "Tree" },
+    { kanji: "金", meaning: "Gold" },
+    { kanji: "魚", meaning: "Fish" },
+    { kanji: "車", meaning: "Car" },
+    { kanji: "雨", meaning: "Rain" },
+    { kanji: "電", meaning: "Electricity" },
+    { kanji: "手", meaning: "Hand" },
+    { kanji: "目", meaning: "Eye" },
+    { kanji: "口", meaning: "Mouth" },
+    { kanji: "耳", meaning: "Ear" },
+    { kanji: "花", meaning: "Flower" },
+    { kanji: "犬", meaning: "Dog" },
+    { kanji: "水", meaning: "Water" },
+    { kanji: "土", meaning: "Earth" },
+    { kanji: "鳥", meaning: "Bird" },
+    { kanji: "虫", meaning: "Insect" },
+    { kanji: "猫", meaning: "Cat" },
 ];
 
 let currentKanjiIndex = 0;
@@ -41,15 +41,21 @@ function displayKanji() {
     kanjiDisplay.innerText = kanjis[currentKanjiIndex].kanji;
 }
 
+function shuffleOptions() {
+    const shuffledOptions = [...kanjis];
+    const correctOption = shuffledOptions.splice(currentKanjiIndex, 1)[0];
+    shuffledOptions.sort(() => Math.random() - 0.5);
+    shuffledOptions.length = 3;
+    const randomPosition = Math.floor(Math.random() * 4);
+    shuffledOptions.splice(randomPosition, 0, correctOption);
+    return shuffledOptions;
+}
+
 function displayOptions() {
     const optionsContainer = document.getElementById("options");
     optionsContainer.innerHTML = "";
-
-    const shuffledOptions = [...kanjis];
-    shuffledOptions.splice(currentKanjiIndex, 1);
-    shuffledOptions.sort(() => Math.random() - 0.5);
-    shuffledOptions.length = 3;
-    shuffledOptions.push(kanjis[currentKanjiIndex]);
+   
+    const shuffledOptions = shuffleOptions();  
 
     shuffledOptions.forEach(option => {
         const button = document.createElement("button");
