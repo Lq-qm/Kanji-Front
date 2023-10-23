@@ -1,7 +1,7 @@
 const kanjis = [
     { kanji: "火", meaning: "Fire" },
     { kanji: "山", meaning: "Mountain" },
-    { kanji: "日", meaning: "day" },
+    { kanji: "日", meaning: "Day" },
     { kanji: "月", meaning: "Month" },
     { kanji: "水", meaning: "Water" },
     { kanji: "風", meaning: "Wind" },
