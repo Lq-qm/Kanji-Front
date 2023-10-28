@@ -15,18 +15,25 @@ body {
 }
 
 .kanji {
-    font-size: 120px;
+    font-size: 125px;
+    background-color: #f5f5f5;
+    margin: -30px 0px;
     margin-bottom: 20px;
+    padding: 10px 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 8px -6px 6px black;
+
 }
 
 .options button {
     display: block;
-    margin: 10px 0;
+    margin: 10px 0px;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    box-shadow: 3px -3px 2px black;
 }
 
 .kanjiList ul {
@@ -41,7 +48,11 @@ body {
 }
 
 .kanjiList li {
-    margin: 5px;
+    margin: 7px;
+    border-radius: 10px; 
+    background-color: #f5f5f5;
+    box-shadow: -4px 4px 5px black;
+    padding: 3px 3px;
     cursor: pointer;
 }
 
