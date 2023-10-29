@@ -15,7 +15,7 @@ body {
 }
 
 .kanji {
-    font-size: 125px;
+    font-size: 150px;
     background-color: #f5f5f5;
     margin: -30px 0px;
     margin-bottom: 20px;
@@ -33,7 +33,8 @@ body {
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 3px -3px 2px black;
+    transition: 5s;
+    box-shadow: 3px -3px 2px black; 
 }
 
 .kanjiList ul {
@@ -52,11 +53,11 @@ body {
     border-radius: 10px; 
     background-color: #f5f5f5;
     box-shadow: -4px 4px 5px black;
-    padding: 3px 3px;
+    padding: 5px 5px;
     cursor: pointer;
 }
 
 .kanjiList li.active {
     font-weight: bold;
-    color: #61c461;
+    background-color: #61c461; 
 }
