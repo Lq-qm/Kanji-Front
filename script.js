@@ -27,7 +27,6 @@ const kanjis = [
     { kanji: "耳", meaning: "Ear" },
     { kanji: "花", meaning: "Flower" },
     { kanji: "犬", meaning: "Dog" },
-    { kanji: "水", meaning: "Water" },
     { kanji: "土", meaning: "Earth" },
     { kanji: "鳥", meaning: "Bird" },
     { kanji: "虫", meaning: "Insect" },
@@ -105,7 +104,7 @@ function checkAnswer(option) {
     if (isCorrect) {
         kanjiItem.classList.add("active");
     } else {
-        kanjiList.children.forEach(item => item.classList.remove("active"));
+        kanjiItem.classList.add("wrong");
     }
 
     currentKanjiIndex = (currentKanjiIndex + 1) % kanjis.length;
