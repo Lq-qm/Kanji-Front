@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin: 120px;
+    background: #fcfcfc;
 }
 
 .quiz, .kanjiList {
@@ -27,7 +28,6 @@ body {
     text-align: center;
     border-radius: 10px;
     box-shadow: 8px -6px 8px black;
-
 }
 
 .options button {
@@ -43,12 +43,12 @@ body {
 
 .kanjiList ul {
     list-style-type: none;
-    padding: 100px;
+    padding: 5px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     font-size: 30px;
 }
 
