@@ -32,8 +32,8 @@ body {
 
 .options button {
     display: block;
-    margin: 10px 40px;
-    padding: 10px 15px;
+    margin: 10px 0px;
+    padding: 10px 50px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
@@ -41,10 +41,15 @@ body {
     box-shadow: 5px -5px 5px black; 
 }
 
+#seconds {
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .kanjiList ul {
     list-style-type: none;
-    padding: 5px;
-    margin: 0;
+    padding: 0px;
+    margin: -7px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

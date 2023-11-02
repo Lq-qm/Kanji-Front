@@ -136,6 +136,24 @@ function displayKanji() {
     kanjiDisplay.innerText = kanjis[currentKanjiIndex].kanji;
 }
 
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+setInterval(setTime, 1000);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 1000);
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+
 function shuffleOptions() {
     const shuffledOptions = [...kanjis];
     const correctOption = shuffledOptions.splice(currentKanjiIndex, 1)[0];
@@ -173,7 +191,7 @@ function checkAnswer(option) {
 
     currentKanjiIndex = (currentKanjiIndex + 1) % kanjis.length;
     displayKanji();
-    displayOptions();
+    displayOptions(); 
 }
 
 function createKanjiList() {
